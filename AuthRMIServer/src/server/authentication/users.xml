@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <roles>
+        <role name="HR1">
+        </role>
+        <role name="HR2">
+            <permission name="salary_change"/>
+            <permission name="create_employee"/>
+        </role>
+        <role name="HR3">
+            <permission name="salary_change"/>
+        </role>
+    </roles>
+    <users>
+        <user name="HR1" pass="X5eswXA5mNCz6dcmw58hnw==" role="HR1"/>
+        <user name="HR2" pass="x6NnKVfO9749kG3ZJ31AQA==" role="HR2"/>
+        <user name="HR3" pass="bh5sYR4rj7QtEEJ1JdRaGg==" role="HR3"/>
+    </users>
+</root>
