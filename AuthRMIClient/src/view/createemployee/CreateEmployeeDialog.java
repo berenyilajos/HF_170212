@@ -124,10 +124,10 @@ public class CreateEmployeeDialog extends JDialog {
               returnVal=Controller.getServer().save(employee);
               System.out.println(returnVal);
               System.out.println(employee.getID());
-            } catch (SQLException ex) {
+            } catch (ClassNotFoundException ex) {
               System.out.println(ex.getMessage());
               JOptionPane.showMessageDialog(null, "Most probably misssing ojdbc driver!", "Error", JOptionPane.ERROR_MESSAGE);
-            } catch (ClassNotFoundException ex) {
+            } catch (SQLException ex) {
               System.out.println(ex.getMessage());
               JOptionPane.showMessageDialog(null, "Querying data failed!", "Error", JOptionPane.ERROR_MESSAGE);
             } catch (RemoteException ex) {

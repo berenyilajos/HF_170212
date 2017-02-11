@@ -3,6 +3,7 @@ package server.authentication;
 
 import interfaces.AuthInterface;
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
@@ -13,7 +14,12 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 
-public class Authentication implements AuthInterface {
+public class Authentication extends UnicastRemoteObject implements AuthInterface {
+  
+  public Authentication() throws RemoteException {
+//    super();
+  }
+  
   InputSource xmlUsers = new InputSource("./src/server/authentication/users.xml");
   XPath xPath = XPathFactory.newInstance().newXPath();
   MessageDigest md = null;

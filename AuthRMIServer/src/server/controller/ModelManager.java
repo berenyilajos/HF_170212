@@ -2,13 +2,18 @@ package server.controller;
 
 import interfaces.ModelInterface;
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import model.Department;
 import model.Employee;
 import model.Job;
 
-public class ModelManager implements ModelInterface {
+public class ModelManager extends UnicastRemoteObject implements ModelInterface {
+  
+  public ModelManager() throws RemoteException {
+//    super();
+  }
 
   @Override
   public ArrayList<Employee> getAllEmployees() throws RemoteException, ClassNotFoundException, SQLException {
